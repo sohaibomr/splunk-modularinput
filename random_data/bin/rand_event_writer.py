@@ -51,7 +51,7 @@ class SplunkScript(Script):
         """
         for input_name, input_item in inputs.inputs.iteritems():
             datakind = str(input_item["datakind"])
-            write_splunk_event(input_name, ew, datakind)
+            write_splunk_event(input_name, ew, datakind) //writes event into the splunk
 
 
 if __name__ == "__main__":

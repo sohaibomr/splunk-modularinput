@@ -13,5 +13,5 @@ def write_splunk_event(input_name, ew, server_address):
     EventWriter.log(ew, EventWriter.INFO, "Started generating Random data for %s" % server_address)   
     event = Event()
     event.stanza = input_name
-    event.data = get_bandwidth()
+    event.data = get_bandwidth() //get_bandwidth generates random bandwidth data for ex "user=localhost download=150 upload=100"
     ew.write_event(event)
